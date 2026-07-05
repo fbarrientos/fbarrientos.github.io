@@ -1,396 +1,426 @@
-<!DOCTYPE HTML>
-<html lang="en-us">
-	<head>
-		<title>Fredy Barrientos-Espillco</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fredy Barrientos-Espillco | Applied AI Researcher</title>
+    <meta name="description" content="Portfolio of Fredy Barrientos-Espillco, Ph.D. Applied AI Researcher specializing in Deep Learning, Computer Vision, and Generative Models.">
+    <meta name="keywords" content="Fredy Barrientos-Espillco, AI Researcher, Deep Learning, Computer Vision, Generative Models, Diffusion Models, Ph.D. Computer Science">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fbarrientos.github.io/">
+    <meta property="og:title" content="Fredy Barrientos-Espillco | Applied AI Researcher">
+    <meta property="og:description" content="Ph.D. in Computer Science. Advancing deep learning, computer vision, and generative models for autonomous systems and environmental monitoring.">
+    <meta property="og:image" content="images/avatar2.jpg">
 
-		<!-- Header -->
-			<div id="header">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fbarrientos.github.io/">
+    <meta property="twitter:title" content="Fredy Barrientos-Espillco | Applied AI Researcher">
+    <meta property="twitter:description" content="Ph.D. in Computer Science. Advancing deep learning, computer vision, and generative models for autonomous systems and environmental monitoring.">
+    <meta property="twitter:image" content="images/avatar2.jpg">
 
-				<div class="top">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Interactive Background Canvas -->
+    <canvas id="neuralCanvas"></canvas>
 
-					<!-- Logo -->
-						<div id="logo">
-							<h1 id="title">Fredy Barrientos-Espillco</h1>
-							<span class="image avatar98"><img src="images/avatar2.jpg" alt="" /></span>
-							<p>Applied AI Researcher</p>
-						</div>
+    <!-- Sidebar Navigation (Desktop) / Floating Menu (Mobile) -->
+    <nav class="sidebar" id="sidebarMenu">
+        <div class="sidebar-header">
+            <div class="avatar-container">
+                <img src="images/avatar2.jpg" alt="Fredy Barrientos-Espillco" class="profile-avatar" onerror="this.src='https://api.dicebear.com/7.x/bottts/svg?seed=Fredy&backgroundColor=0d0f14'">
+                <div class="avatar-ring"></div>
+            </div>
+            <h1 class="nav-name">Fredy Barrientos</h1>
+            <p class="nav-tagline">Applied AI Researcher</p>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-item active" id="nav-home"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
+            <li><a href="#bio" class="nav-item" id="nav-bio"><i class="fa-solid fa-user-tie"></i> <span>About & Bio</span></a></li>
+            <li><a href="#publications" class="nav-item" id="nav-publications"><i class="fa-solid fa-book-open"></i> <span>Publications</span></a></li>
+            <li><a href="#projects" class="nav-item" id="nav-projects"><i class="fa-solid fa-diagram-project"></i> <span>Projects</span></a></li>
+            <li><a href="#skills" class="nav-item" id="nav-skills"><i class="fa-solid fa-microchip"></i> <span>Skills</span></a></li>
+            <li><a href="#contact" class="nav-item" id="nav-contact"><i class="fa-solid fa-paper-plane"></i> <span>Contact</span></a></li>
+        </ul>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon fa-home">Home</span></a></li>
-								<li><a href="#publications" id="publications-link"><span class="icon fa-book">Publications</span></a></li>
-								<li><a href="#projects" id="projects-link"><span class="icon fa-flask">Projects</span></a></li>
-								<li><a href="#skills" id="skills-link"><span class="icon fa-key">Skills</span></a></li>
-								<li><a href="#others" id="blog-link"><span class="icon fa-pencil">Others</span></a></li>
-							</ul>
-						</nav>
+        <div class="sidebar-footer">
+            <div class="social-icons">
+                <a href="https://github.com/fbarrientos" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/fredybarrientos/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/fbarrientose" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://fbarrientose.medium.com/" target="_blank" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Fredy Barrientos</p>
+        </div>
+    </nav>
 
-				</div>
+    <!-- Mobile Hamburger Toggle -->
+    <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 
-				<div class="bottom">
+    <!-- Main Content Container -->
+    <main class="content-wrapper">
+        
+        <!-- Hero / Home Section -->
+        <section id="home" class="hero-section section-active">
+            <div class="hero-grid">
+                <div class="hero-text-content">
+                    <span class="hero-greeting">Welcome to my research space</span>
+                    <h2 class="hero-title">Fredy Barrientos-Espillco, Ph.D.</h2>
+                    <h3 class="hero-subtitle">
+                        <span class="typewriter-text" id="typewriter"></span><span class="cursor">|</span>
+                    </h3>
+                    <p class="hero-lead">
+                        Translating cutting-edge Deep Learning and Computer Vision research into robust, real-world autonomous navigation and environmental monitoring systems.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#publications" class="btn btn-primary">View Publications</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                
+                <div class="quick-info-card glass-card">
+                    <h4 class="card-title"><i class="fa-solid fa-dna text-gradient"></i> Core Details</h4>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label"><i class="fa-solid fa-graduation-cap"></i> Degree</span>
+                            <span class="info-value">Ph.D. in Computer Science (Summa Cum Laude)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fa-solid fa-building-columns"></i> University</span>
+                            <span class="info-value">Complutense University of Madrid</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fa-solid fa-envelope"></i> Email</span>
+                            <span class="info-value email-click" id="copy-email-btn" title="Click to copy email">
+                                fredybar@ucm.es <i class="fa-regular fa-copy"></i>
+                            </span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fa-solid fa-door-open"></i> Office</span>
+                            <span class="info-value">Physics - Room 237</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-down-indicator">
+                <span>Scroll Down</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </section>
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://twitter.com/fbarrientose" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.linkedin.com/in/fredybarrientos/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/fbarrientos" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="https://fbarrientose.medium.com/" class="icon fa-dribbble"><span class="label">Medium</span></a></li>
-						</ul>
+        <!-- About Me / Bio Section -->
+        <section id="bio" class="bio-section reveal-element">
+            <h2 class="section-title"><span class="text-gradient">Biography</span> & Focus</h2>
+            
+            <div class="bio-content-grid">
+                <div class="bio-main-text glass-card">
+                    <p>
+                        Hi! I’m Fredy Barrientos-Espillco, an **Applied AI Researcher** specialized in Deep Learning, Computer Vision, and Generative Models. 
+                    </p>
+                    <p>
+                        I completed my Ph.D. in Computer Science at the <a href="http://www.ucm.es" target="_blank" class="text-link">Complutense University of Madrid</a> (2020–2024), where I was awarded **Summa Cum Laude**. I was advised by Professor <a href="https://pajares6.wixsite.com/pajares" target="_blank" class="text-link">Gonzalo Pajares</a> and Eva Besada. My research centers around designing deep learning algorithms for object detection, semantic segmentation, and generative models, with direct applications in autonomous navigation and environmental monitoring.
+                    </p>
+                    <p>
+                        I have led key research lines within high-impact R&D projects funded by the Spanish Government and the European Union. Currently, I am focused on the exciting synergies between Computer Vision and Large Language Models (LLMs) to tackle next-generation multimodal challenges.
+                    </p>
+                </div>
 
-				</div>
+                <div class="contributions-panel glass-card">
+                    <h3 class="panel-subtitle"><i class="fa-solid fa-circle-nodes text-gradient"></i> Key Research Contributions</h3>
+                    <ul class="contributions-list">
+                        <li>
+                            <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+                            <div>
+                                <strong>Multi-Task CNN Architectures:</strong>
+                                <span>Designing joint detection and segmentation networks optimized for complex and dynamic aquatic environments.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <div>
+                                <strong>Diffusion Models Customization:</strong>
+                                <span>Fine-tuning text-to-image models (SDXL) combined with LLM-assisted prompt engineering to generate high-quality synthetic training data.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><i class="fa-solid fa-ship"></i></div>
+                            <div>
+                                <strong>ASV Visual Perception:</strong>
+                                <span>Developing real-time, lightweight visual perception algorithms for Autonomous Surface Vehicles (ASVs) navigating under challenging scenarios.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-			</div>
+        <!-- Publications Section -->
+        <section id="publications" class="publications-section reveal-element">
+            <h2 class="section-title"><span class="text-gradient">Selected</span> Publications</h2>
+            <p class="section-desc">My recent papers in top-tier journals such as <i>Expert Systems with Applications</i>, <i>Applied Soft Computing</i>, and <i>Neural Networks</i>.</p>
 
-		<!-- Main -->
-			<div id="main" style="line-height: 1.65em; font-size: 20px;">
+            <div class="publications-list">
+                
+                <!-- Publication 1 -->
+                <article class="publication-card glass-card">
+                    <div class="pub-header">
+                        <span class="pub-badge journal-badge">Expert Systems with Applications</span>
+                        <span class="pub-badge date-badge">August 2025</span>
+                    </div>
+                    <h3 class="pub-title">
+                        Customization of the Text-to-Image Diffusion Model by Fine-Tuning for the generation of synthetic images of cyanobacterial blooms in lentic water bodies
+                    </h3>
+                    <p class="pub-authors">F. Barrientos-Espillco, G. Pajares, J.A. López-Orozco, E. Besada-Portas</p>
+                    <p class="pub-summary">
+                        Presents a novel approach combining DreamBooth-based fine-tuning of the Stable Diffusion XL model with LLM-driven prompt generation (LLaMa 2) to synthesize realistic images of cyanobacterial blooms and navigational obstacles for training visual models.
+                    </p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.eswa.2025.128169" target="_blank" class="btn btn-inline"><i class="fa-solid fa-file-pdf"></i> Read Paper</a>
+                    </div>
+                </article>
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+                <!-- Publication 2 -->
+                <article class="publication-card glass-card">
+                    <div class="pub-header">
+                        <span class="pub-badge journal-badge">Applied Soft Computing</span>
+                        <span class="pub-badge date-badge">September 2024</span>
+                    </div>
+                    <h3 class="pub-title">
+                        Integration of object detection and semantic segmentation based on Convolutional Neural Networks for navigation and monitoring of cyanobacterial blooms in lentic water scenes
+                    </h3>
+                    <p class="pub-authors">F. Barrientos-Espillco, M.J. Gómez-Silva, E. Besada-Portas, G. Pajares</p>
+                    <p class="pub-summary">
+                        Introduces a unified CNN architecture that simultaneously handles object detection and pixel-level semantic segmentation in aquatic environments, enabling safer autonomous boat navigation.
+                    </p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.asoc.2024.111849" target="_blank" class="btn btn-inline"><i class="fa-solid fa-file-pdf"></i> Read Paper</a>
+                    </div>
+                </article>
 
-							<header>
-								<h3>Fredy Barrientos-Espillco</h3>
-							</header>
-							<p>Applied AI Researcher | Deep Learning · Computer Vision · Generative Models</p>
+                <!-- Publication 3 -->
+                <article class="publication-card glass-card">
+                    <div class="pub-header">
+                        <span class="pub-badge journal-badge">Neural Networks</span>
+                        <span class="pub-badge date-badge">January 2024</span>
+                    </div>
+                    <h3 class="pub-title">
+                        Filter Pruning for Convolutional Neural Networks in Semantic Image Segmentation
+                    </h3>
+                    <p class="pub-authors">C. I. López-González, E. Gascó, F. Barrientos-Espillco, E. Besada-Portas, G. Pajares</p>
+                    <p class="pub-summary">
+                        Proposes filter pruning and optimization strategies for semantic segmentation CNNs, allowing heavy models to run in real-time on resource-constrained edge devices aboard ASVs.
+                    </p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.neunet.2023.11.010" target="_blank" class="btn btn-inline"><i class="fa-solid fa-file-pdf"></i> Read Paper</a>
+                    </div>
+                </article>
 
-							<span class="image avatar158"><img src="images/avatar2.jpg" alt="" /></span>
+                <!-- Publication 4 -->
+                <article class="publication-card glass-card">
+                    <div class="pub-header">
+                        <span class="pub-badge journal-badge">Applied Soft Computing</span>
+                        <span class="pub-badge date-badge">July 2023</span>
+                    </div>
+                    <h3 class="pub-title">
+                        Semantic segmentation based on Deep learning for the detection of Cyanobacterial Harmful Algal Blooms (CyanoHABs) using synthetic images
+                    </h3>
+                    <p class="pub-authors">F. Barrientos-Espillco, E. Gascó, C.I. López-González, M.J. Gómez-Silva, G. Pajares</p>
+                    <p class="pub-summary">
+                        Develops a deep learning semantic segmentation pipeline to detect harmful algal blooms using synthetic imagery to alleviate the lack of real annotated training datasets.
+                    </p>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.asoc.2023.110315" target="_blank" class="btn btn-inline"><i class="fa-solid fa-file-pdf"></i> Read Paper</a>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-							<p>
-								Email: fredybar[at]ucm[dot]es 
-								<br />
-								Phone: (+34) 91 394 4375
-								<br />
-								Room: Physics - 237
-							</p>
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section reveal-element">
+            <h2 class="section-title"><span class="text-gradient">Research</span> Projects</h2>
+            <p class="section-desc">Principal R&D lines funded by the European Union and the Spanish Government.</p>
 
-							<h4>Bio</h4>
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card glass-card">
+                    <div class="project-icon"><i class="fa-solid fa-people-group"></i></div>
+                    <h3 class="project-title">INSERTION</h3>
+                    <p class="project-subtitle">Inspection and maintenance in harsh environments by multi-robot cooperation</p>
+                    <div class="project-meta">
+                        <span><i class="fa-regular fa-calendar"></i> 2022 - 2025</span>
+                        <span><i class="fa-solid fa-piggy-bank"></i> PID2021-127648OB-C33</span>
+                    </div>
+                    <p class="project-text">
+                        A collaborative project with UPO, UPM, and UCM to develop advanced techniques for perception, localization, mapping, navigation, and multi-robot cooperation in challenging environments.
+                    </p>
+                </div>
 
-							<p>Hi! I’m Fredy Barrientos-Espillco, Applied AI Researcher, specialized in Deep Learning, Computer Vision, and Generative Models.<br><br>
-							Ph.D. in Computer Science from the <a href="http://www.ucm.es">Complutense University of Madrid</a> (2020–2024), awarded Summa Cum Laude, advised by Professor <a href="https://pajares6.wixsite.com/pajares">Gonzalo Pajares</a> and Eva Besada. My research focuses on the development of deep learning algorithms for object detection, semantic segmentation, and generative models, with direct applications in autonomous navigation and environmental monitoring.<br><br>
-							I have led lines of research within the framework of high-impact R&D projects, such as SMART-BLOOMS, AI-GES BLOOM-CM, and AMPBAS, funded by the Spanish Government and the European Union. My main contributions include:
-							<ul>
-								<li>
-									Designing multi-task CNN architectures that integrate detection and segmentation for complex aquatic environments.
-								</li>
-								<li>
-									The customization of text-to-image diffusion models for synthetic data generation, combined with LLM-assisted prompt engineering, improves training diversity and quality.
-								</li>
-								<li>
-									Developing real-time visual perception algorithms for Autonomous Surface Vehicles (ASVs) in challenging conditions.
-								</li>
-							</ul>
-							I have published in top-tier journals such as Expert Systems with Applications, Applied Soft Computing, and Neural Networks, with contributions on generative modeling, efficient network architectures, and robust scene understanding.<br><br>
-							I am passionate about translating cutting-edge AI research into scalable solutions, and my current interests expand towards the synergy of Computer Vision and Large Language Models (LLMs) to tackle next-generation multimodal challenges.<br><br>
-							I’m open to collaborations and opportunities where I can contribute to advancing AI research while building impactful, real-world applications.</p>
+                <!-- Project 2 -->
+                <div class="project-card glass-card">
+                    <div class="project-icon"><i class="fa-solid fa-gemini"></i></div>
+                    <h3 class="project-title">SMART-BLOOMS</h3>
+                    <p class="project-subtitle">Intelligent management of cyanobacteria using digital twins and edge computing</p>
+                    <div class="project-meta">
+                        <span><i class="fa-regular fa-calendar"></i> 2022 - 2024</span>
+                        <span><i class="fa-solid fa-piggy-bank"></i> TED2021-130123B-I00</span>
+                    </div>
+                    <p class="project-text">
+                        Ecological & Digital Transition project focused on creating a digital twin of dammed water reservoirs and an IoT infrastructure with edge computing to manage and predict cyanobacterial blooms.
+                    </p>
+                </div>
 
-						</div>
-					</section>
+                <!-- Project 3 -->
+                <div class="project-card glass-card">
+                    <div class="project-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <h3 class="project-title">IA-GES BLOOM-CM</h3>
+                    <p class="project-subtitle">Comprehensive system for cyanobacterial bloom alert and management</p>
+                    <div class="project-meta">
+                        <span><i class="fa-regular fa-calendar"></i> 2021 - 2024</span>
+                        <span><i class="fa-solid fa-piggy-bank"></i> Community of Madrid (Y2020/TCS-6420)</span>
+                    </div>
+                    <p class="project-text">
+                        Created an early warning IoT framework using AI-guided Autonomous Surface Vehicles (ASVs) combined with modeling and simulation techniques to map inland water blooms.
+                    </p>
+                </div>
 
-				<!-- Publications -->
-					<section id="publications" class="two">
-						<div class="container">
+                <!-- Project 4 -->
+                <div class="project-card glass-card">
+                    <div class="project-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <h3 class="project-title">AMPBAS</h3>
+                    <p class="project-subtitle">Automatic Monitoring of Pollutants in Dammed Waters using Biosensors & ASVs</p>
+                    <div class="project-meta">
+                        <span><i class="fa-regular fa-calendar"></i> 2019 - 2021</span>
+                        <span><i class="fa-solid fa-piggy-bank"></i> RTI2018-098962-B-C21</span>
+                    </div>
+                    <p class="project-text">
+                        R&D challenges project delivering a cooperative multi-boat platform equipped with biological sensors to detect and alert on bacterial and chemical water contamination.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-							<header>
-								<h3>Publications</h3>
-							</header>
-							<p>
-								A collection of my published research papers.
-							</p>
-							<h4>
-								Customization of the Text-to-Image Diffusion Model by Fine-Tuning for the generation of synthetic images of cyanobacterial blooms in lentic water bodies
-							</h4>
-							<p style="margin-bottom: 0; font-size: 16px;">
-								<i>F. Barrientos-Espillco, G. Pajares, J.A. López-Orozco, E. Besada-Portas</i>
-							</p>
-							<p style="margin-bottom: 0; font-size: 16px;">
-								<i>Expert Systems with Applications, August 2025</i>
-							</p>
-							<p>
-								This paper presents a novel approach that combines DreamBooth-based fine-tuning of the Stable Diffusion XL model with LLM-driven prompts generation (LLaMa 2) to synthesize realistic images of cyanobacterial blooms and navigational obstacles in lentic water bodies.<a href="https://doi.org/10.1016/j.eswa.2025.128169" target="_blank">[paper]</a>
-							</p>
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section reveal-element">
+            <h2 class="section-title">Skills & <span class="text-gradient">Expertise</span></h2>
+            
+            <div class="skills-grid">
+                <!-- Research Areas -->
+                <div class="skills-card glass-card">
+                    <h3><i class="fa-solid fa-brain text-gradient"></i> Research Focus</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Generative Models</span>
+                        <span class="skill-tag">Semantic Segmentation</span>
+                        <span class="skill-tag">Object Detection</span>
+                        <span class="skill-tag">Image Synthesis</span>
+                        <span class="skill-tag">Model Compression / Pruning</span>
+                        <span class="skill-tag">Autonomous Surface Vehicles (ASVs)</span>
+                    </div>
+                </div>
 
-							<h4>
-								Integration of object detection and semantic segmentation based on Convolutional Neural Networks for navigation and monitoring of cyanobacterial blooms in lentic water scenes
-							</h4>
-							<p style="margin-bottom: 0; font-size: 16px;">
-								<i>F. Barrientos-Espillco, M.J. Gómez-Silva, E. Besada-Portas, G. Pajares</i>
-							</p>
-							<p style="margin-bottom: 0; font-size: 16px;">
-								<i>Applied Soft Computing, September 2024</i>
-							</p>
-							<p>
-								In this paper we present an architecture based on Convolutional Neural Networks (CNNs) designed to simultaneously address object detection and semantic segmentation in lentic aquatic environments.<a href="https://doi.org/10.1016/j.asoc.2024.111849" target="_blank">[paper]</a>
-							</p>
+                <!-- Programming Languages -->
+                <div class="skills-card glass-card">
+                    <h3><i class="fa-solid fa-terminal text-gradient"></i> Programming</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag highlight">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5 / CSS3</span>
+                    </div>
+                </div>
 
-							<h4>
-								Filter Pruning for Convolutional Neural Networks in Semantic Image Segmentation
-							</h4>
-							<p style="margin-bottom: 0; font-size: 16px;">
-								<i>C. I. López-González, E. Gascó, F. Barrientos-Espillco, E. Besada-Portas, G. Pajares</i>
-							</p>
-							<p style="margin-bottom: 0; font-size: 16px;">
-								<i>Neural Networks, January 2024</i>
-							</p>
-							<p>
-								This paper presents innovative filter pruning and fine-tuning strategies for CNNs for use in small, resource-constrained devices, such as machine vision systems embedded in Autonomous Surface Vehicles (ASVs), where real-time computation is critical for safe navigation and contaminant detection.<a href="https://doi.org/10.1016/j.neunet.2023.11.010" target="_blank">[paper]</a>
-							</p>
+                <!-- Frameworks & Libraries -->
+                <div class="skills-card glass-card">
+                    <h3><i class="fa-solid fa-gears text-gradient"></i> Frameworks & Tools</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag highlight">PyTorch</span>
+                        <span class="skill-tag highlight">TensorFlow</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">NumPy / Pandas</span>
+                        <span class="skill-tag">DreamBooth / SDXL</span>
+                        <span class="skill-tag">Git / Linux / Docker</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-							<h4>
-								Semantic segmentation based on Deep learning for the detection of Cyanobacterial Harmful Algal Blooms (CyanoHABs) using synthetic images
-							</h4>
-							<p style="margin-bottom: 0; font-size: 16px;">
-								<i>F. Barrientos-Espillco, E. Gascó, C.I. López-González, M.J. Gómez-Silva, G. Pajares</i>
-							</p>
-							<p style="margin-bottom: 0; font-size: 16px;">
-								<i>Applied Soft Computing, July 2023</i>
-							</p>
-							<p>
-								This AI Paper proposes the detection of Cyanobacterial Harmful Algal Blooms (CyanoHABs) from the perspective of an Autonomous Surface Vehicle (ASV) using deep learning-based semantic segmentation methods with synthetic images.<a href="https://doi.org/10.1016/j.asoc.2023.110315" target="_blank">[paper]</a>
-							</p>
-							<!--
-							<ul>
-								<li>
-									May. 2025: Customization of the Text-to-Image Diffusion Model by Fine-Tuning for the generation of synthetic images of cyanobacterial blooms in lentic water bodies [Expert Systems with Applications (Accepted and published)]<a href="https://doi.org/10.1016/j.eswa.2025.128169" target="_blank">[paper]</a>
-								</li>
-								<li>
-									Jun. 2024: Integration of object detection and semantic segmentation based on Convolutional Neural Networks for navigation and monitoring of cyanobacterial blooms in lentic water scenes [Applied Soft Computing (Accepted and published)]<a href="https://doi.org/10.1016/j.asoc.2024.111849" target="_blank">[paper]</a>
-								</li>
-								<li>
-									Nov. 2023: Filter Pruning for Convolutional Neural Networks in Semantic Image Segmentation [Neural Networks (Accepted and published)]<a href="https://doi.org/10.1016/j.neunet.2023.11.010" target="_blank">[paper]</a>
-								</li>
-								<li>
-									Apr. 2023: Semantic segmentation based on Deep learning for the detection of Cyanobacterial Harmful Algal Blooms (CyanoHABs) using synthetic images [Applied Soft Computing (Accepted and published)]<a href="https://doi.org/10.1016/j.asoc.2023.110315" target="_blank">[paper]</a>
-								</li>
-							</ul>
-							-->
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section reveal-element">
+            <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+            <p class="section-desc">Open for research collaborations, consulting, or speaking engagements.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card glass-card">
+                    <div class="contact-info-block">
+                        <div class="contact-icon-wrapper"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p class="copy-trigger" id="copy-email-bottom" title="Click to copy email">
+                                fredybar@ucm.es <i class="fa-regular fa-copy"></i>
+                            </p>
+                        </div>
+                    </div>
 
-							<div class="row">
-								<!--
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Ipsum Feugiat</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
-								</div>
-								-->
-							</div>
+                    <div class="contact-info-block">
+                        <div class="contact-icon-wrapper"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>(+34) 91 394 4375</p>
+                        </div>
+                    </div>
 
-						</div>
-					</section>
+                    <div class="contact-info-block">
+                        <div class="contact-icon-wrapper"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4>Office Location</h4>
+                            <p>Physics Building - Room 237<br>Complutense University of Madrid</p>
+                        </div>
+                    </div>
+                </div>
 
-				<!-- Projects -->
-					<section id="projects" class="three">
-						<div class="container">
+                <div class="contact-card glass-card extra-activities">
+                    <h3><i class="fa-solid fa-handshake text-gradient"></i> Other Activities</h3>
+                    <p>
+                        Regular reviewer for high-impact journals in the fields of Neural Networks, Applied Soft Computing, and Computer Vision.
+                    </p>
+                    
+                    <div class="social-pills">
+                        <a href="https://github.com/fbarrientos" target="_blank" class="social-pill"><i class="fa-brands fa-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/fredybarrientos/" target="_blank" class="social-pill"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                        <a href="https://twitter.com/fbarrientose" target="_blank" class="social-pill"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                        <a href="https://fbarrientose.medium.com/" target="_blank" class="social-pill"><i class="fa-brands fa-medium"></i> Medium</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-							<header>
-								<h3>Research Projects</h3>
-							</header>
-							<p>
-								A showcase of my key research and engineering projects.
-							</p>
-							<!--
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-							-->
-							<ul>
-								<li>
-									<p style="font-weight: bold; margin-bottom: 0;"> Inspection and maintenance in harsh environments by multi-robot cooperation (INSERTION)
-									</p>
-									
-									<p style="margin-bottom: 0; font-size: 16px;">
-										<i>2022-2025</i>
-									</p>
-									<p style="margin-bottom: 0; font-size: 16px;">
-										<i>Funding: Knowledge Generation Projects. Ministry of Science, Innovation and Universities (PID2021-127648OB-C33).</i>
-									</p>
-									<p>
-										The objectives of this competitive project (where researchers from Universidad Pablo Olavide, Universidad Politéctica de Madrid and UCM colaborate) are the development of new techniques for perception, localisation and mapping in difficult environments; robust navigation and precise control of robots in complex environments; and robot-to-robot cooperation for complex scenarios.
-									</p>
-								</li>
-								<li>
-									<p style="font-weight: bold; margin-bottom: 0;"> Beyond the use of digital technologies in cyanobacterial blooms: intelligent management of cyanobacteria using digital twins and edge computing (SMART-BLOOMS)
-									</p>
-									
-									<p style="margin-bottom: 0; font-size: 16px;">
-										<i>2022-2024</i>
-									</p>
-									<p style="margin-bottom: 0; font-size: 16px;">
-										<i>Funding: Ecological Transition and Digital Transition Projects. Ministry of Science, Innovation and Universities (TED2021-130123B-I00).</i>
-									</p>
-									<p>
-										This Ecological and Digital Transition competitive project (where researchers from the UCM and the UAM cooperte) aims to improve the digitization of the management process of cyanobacteria appearing in waterbodies y creating a digital twin of the whole system and using an IoT infrastructure with edge computing.
-									</p>
-								</li>
-								<li>
-									<p style="font-weight: bold; margin-bottom: 0;"> Towards a comprehensive system for cyanobacterial BLOOM alert and management in inland waters (IA-GES BLOOM-CM)
-									</p>
-									
-									<p style="margin-bottom: 0; font-size: 16px;">
-										<i>2021-2024</i>
-									</p>
-									<p style="margin-bottom: 0; font-size: 16px;">
-										<i>Funding: Community of Madrid (Y2020/TCS- 6420).</i>
-									</p>
-									<p>
-										Development of an IoT system for early warning and efficient characterization of cyanobacteria blooms in dammed waters, using sensors embedded in ASVs guided by AI and Modeling & Simulation techniques.
-									</p>
-								</li>
-								<li>
-									<p style="font-weight: bold; margin-bottom: 0;"> Automatic Monitoring of Pollutants in Dammed Waters using Biosensors and Autonamous Surface Vehicle (AMPBAS)
-									</p>
-									
-									<p style="margin-bottom: 0; font-size: 16px;">
-										<i>2019-2021</i>
-									</p>
-									<p style="margin-bottom: 0; font-size: 16px;">
-										<i>Funding: Challenges - Research. Ministry of Science, Innovation and Universities (RTI2018-098962-B-C21).</i>
-									</p>
-									<p>
-										Development of an automatic multi-boat system, equipped with biosensors to detect and alert on contamination by microorganisms in dammed water.
-									</p>
-								</li>
-							</ul>
+    <!-- Toast notification for click to copy -->
+    <div class="toast" id="toast">Email copied to clipboard!</div>
 
-						</div>
-					</section>
-
-				<!-- Skills -->
-					<section id="skills" class="four">
-						<div class="container">
-
-							<header>
-								<h3>Skills & Expertise</h3>
-							</header>
-							<p>
-								My technical skills and areas of research focus.
-							</p>
-							<!--
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-							-->
-							<div class="row">
-								
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<h4>Research Areas</h4>
-										<ul>
-											<li>Computer Vision</li>
-											<li>Deep Learning</li>
-											<li>Generative Models</li>
-										</ul>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<h4>
-											Programming Languages
-										</h4>
-										<ul>
-											<li>Python</li>
-											<li>Java</li>
-											<li>C++</li>
-											<li>MATLAB</li>
-											<li>JavaScript</li>
-										</ul>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<h4>
-											Frameworks & Libraries
-										</h4>
-										<ul>
-											<li>PyTorch</li>
-											<li>TensorFlow</li>
-											<li>Keras</li>
-											<li>scikit-learn</li>
-											<li>OpenCV</li>
-											<li>NumPy</li>
-											<li>Pandas</li>
-										</ul>
-									</article>
-								</div>
-								
-							</div>
-
-						</div>
-					</section>
-
-				<!-- About Me -->
-					<section id="others" class="five">
-						<div class="container">
-
-							<header>
-								<h3>Others</h3>
-							</header>
-							<!--
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-							-->
-							<p>I regularly collaborate as a reviewer for several journals.</p>
-
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; 2025</li><li>
-					</ul>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <!-- JavaScript logic -->
+    <script src="script.js"></script>
+</body>
 </html>
